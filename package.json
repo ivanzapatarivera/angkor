@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/ivanzapatarivera/angkor/issues"
   },
-  "homepage": "https://github.com/ivanzapatarivera/angkor#readme"
+  "homepage": "https://github.com/ivanzapatarivera/angkor#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "path": "^0.12.7"
+  }
 }
