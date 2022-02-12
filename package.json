@@ -1,0 +1,23 @@
+{
+  "name": "angkor",
+  "version": "1.0.0",
+  "description": "Angkor is Project 0 for building John S. Brook travel blog.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanzapatarivera/angkor.git"
+  },
+  "keywords": [
+    "angkor",
+    "project0"
+  ],
+  "author": "Ivan J. Zapata-Rivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanzapatarivera/angkor/issues"
+  },
+  "homepage": "https://github.com/ivanzapatarivera/angkor#readme"
+}
