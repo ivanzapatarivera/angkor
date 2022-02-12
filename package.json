@@ -4,7 +4,11 @@
   "description": "Angkor is Project 0 for building John S. Brook travel blog.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "node index.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client"
   },
   "repository": {
     "type": "git",
@@ -21,7 +25,9 @@
   },
   "homepage": "https://github.com/ivanzapatarivera/angkor#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
+    "nodemon": "^2.0.15",
     "path": "^0.12.7"
   }
 }
