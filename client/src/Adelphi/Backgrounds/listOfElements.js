@@ -1,0 +1,24 @@
+var defaultBackgroundColor = "hsl(240, 100%, 3%)";
+var bodyColor = "lightgray"
+var headerColor = "white"
+
+export var listOfElements = {
+  root: {
+    backgroundColor: defaultBackgroundColor,
+    minHeight: "100vh",
+    color: headerColor,
+  },
+  welcome: {
+    backgroundColor: "hsl(240, 50%, 50%)",
+    height: "50px",
+    minHeight: "10vh",
+    textAlign: "center", 
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "middle"
+  },
+  message: {
+    color: bodyColor,
+  },
+};

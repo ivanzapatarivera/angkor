@@ -1,19 +1,4 @@
-var defaultBackgroundColor = "hsl(240, 100%, 3%";
-
-var listOfElements = {
-  root: {
-    backgroundColor: defaultBackgroundColor,
-    minHeight: "100vh",
-    color: "white",
-  },
-  welcome: {
-    backgroundColor: "hsl(240, 50%, 50%)",
-    minHeight: "500px",
-  },
-  message: {
-    color: "lightgray",
-  },
-};
+import { listOfElements } from "./listOfElements";
 
 class setDefaultStyles {
   setForValue = (element, key, value) => {
