@@ -12,11 +12,7 @@ export var listOfElements = {
     backgroundColor: "hsl(240, 50%, 50%)",
     height: "50px",
     minHeight: "10vh",
-    textAlign: "center", 
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "middle"
+    textAlign: "center"
   },
   message: {
     color: bodyColor,
