@@ -15,7 +15,6 @@ class App extends Component {
       <div>
         <div id="welcome">Hello, welcome to my app.</div>
         <div id="message">Let's take a journey together</div>
-        
       </div>
     );
   }
