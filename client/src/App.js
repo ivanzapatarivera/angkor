@@ -5,13 +5,19 @@ let element = document.querySelector("#root");
 
 class App extends Component {
   componentDidMount = () => {
-    this.getDefaultStyles()
-  }
+    this.getDefaultStyles();
+  };
   getDefaultStyles = () => {
     setElementStyleProperties();
   };
   render() {
-    return <div id="welcome">Hello, welcome to my app.</div>;
+    return (
+      <div>
+        <div id="welcome">Hello, welcome to my app.</div>
+        <div id="message">Let's take a journey together</div>
+        
+      </div>
+    );
   }
 }
 
