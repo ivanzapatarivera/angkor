@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-import setBackgroundColor from "./Adelphi/Backgrounds/getDefaultBackgroundColor";
+import {
+  setBackgroundColor,
+  setElementHeight,
+} from "./Adelphi/Backgrounds/setDefaultStyles";
 
-let element = document.querySelector("#root")
+let element = document.querySelector("#root");
 
 class App extends Component {
-  getRootElement = () => {
+  getDefaultStyles = () => {
     setBackgroundColor(element);
-  }
+    setElementHeight(element);
+  };
   render() {
-    this.getRootElement();
+    this.getDefaultStyles();
     return <div>Hello, welcome to my app.</div>;
   }
 }
