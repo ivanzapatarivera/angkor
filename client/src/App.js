@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import { setBackgroundColor } from "./Adelphi/Backgrounds/setDefaultStyles";
+import { setElementStyleProperties } from "./Adelphi/Backgrounds/setDefaultStyles";
 
 let element = document.querySelector("#root");
 
 class App extends Component {
+  componentDidMount = () => {
+    this.getDefaultStyles()
+  }
   getDefaultStyles = () => {
-    setBackgroundColor(element);
+    setElementStyleProperties();
   };
   render() {
-    this.getDefaultStyles();
-    return <div>Hello, welcome to my app.</div>;
+    return <div id="welcome">Hello, welcome to my app.</div>;
   }
 }
 

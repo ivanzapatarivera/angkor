@@ -4,22 +4,28 @@ var listOfElements = {
     minHeight: "100vh",
     color: "white",
   },
+  welcome: {
+    backgroundColor: "hsl(240, 50%, 50%)",
+    minHeight: "500px",
+    color: "white",
+  },
 };
 
 class setDefaultStyles {
-  setForValue = (property, element) => {
-    for (var el in listOfElements) {
-      element.style[property] = listOfElements[el][property];
-    }
+  setForValue = (element, key, value) => {
+    element.style[value] = listOfElements[key][value]
   };
 
-  setBackgroundColor = (element) => {
+  setElementStyleProperties = () => {
     let properties = ["backgroundColor", "minHeight", "color"];
-    properties.forEach((value) => {
-      let property = value;
-      this.setForValue(property, element);
-    });
+    for (var el in listOfElements) {
+      let element = document.querySelector("#" + el);
+      let key = element.id;
+      properties.forEach((value) => {
+        this.setForValue(element, key, value);
+      });
+    }
   };
 }
 
-export const { setBackgroundColor } = new setDefaultStyles();
+export const { setElementStyleProperties } = new setDefaultStyles();
