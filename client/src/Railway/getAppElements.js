@@ -2,7 +2,7 @@ var defaultBackgroundColor = "hsl(240, 100%, 3%)";
 var bodyColor = "lightgray"
 var headerColor = "white"
 
-export var listOfElements = {
+export var listOfAppElements = {
   root: {
     backgroundColor: defaultBackgroundColor,
     minHeight: "100vh",

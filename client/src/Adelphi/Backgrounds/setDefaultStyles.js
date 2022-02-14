@@ -1,17 +1,16 @@
-import { listOfElements } from "./listOfElements";
-
 class setDefaultStyles {
-  setForValue = (element, key, value) => {
+  setElementStyle = (element, key, value) => {
     element.style[key] = value;
   };
 
-  setElementStyleProperties = () => {
-    for (var el in listOfElements) {
+  setElementStyleProperties = (arg) => {
+    for (var el in arg) {
+      let els = arg[el];
       let element = document.querySelector("#" + el);
       let id = element.id;
-      Object.keys(listOfElements[el]).forEach((key) => {
-        let property = listOfElements[id][key];
-        this.setForValue(element, key, property);
+      Object.keys(els).forEach((key) => {
+        let property = arg[id][key];
+        this.setElementStyle(element, key, property);
       });
     }
   };

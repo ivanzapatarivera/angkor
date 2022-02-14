@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { setElementStyleProperties } from "./Adelphi/Backgrounds/setDefaultStyles";
+import { listOfAppElements } from "./Railway/getAppElements";
 
 class App extends Component {
   componentDidMount = () => {
     this.getDefaultStyles();
   };
   getDefaultStyles = () => {
-    setElementStyleProperties();
+    setElementStyleProperties(listOfAppElements);
   };
   render() {
     return (
