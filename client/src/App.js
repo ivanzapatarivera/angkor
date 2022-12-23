@@ -6,9 +6,11 @@ class App extends Component {
   componentDidMount = () => {
     this.getDefaultStyles();
   };
+
   getDefaultStyles = () => {
     setElementStyleProperties(listOfAppElements);
   };
+
   render() {
     return (
       <div>
