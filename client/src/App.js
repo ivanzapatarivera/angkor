@@ -8,7 +8,7 @@ class App extends Component {
   };
 
   setTitle = () => {
-    let title = new SetTitle().returnTitle(); 
+    let title = new SetTitle().returnTitle();
     return title;
   };
 
@@ -18,7 +18,11 @@ class App extends Component {
   };
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        
+      </div>
+    );
   }
 }
 
