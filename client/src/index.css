@@ -26,8 +26,15 @@ code {
 }
 
 @media screen and (max-width: 780px) {
-  
+
   body {
     background-position: var(--txpos);
+  }
+}
+
+@media screen and (max-wdith: 480px) {
+  
+  body {
+    background-position: var(--mxpos);
   }
 }
