@@ -1,7 +1,9 @@
 export class SetTitle {
 
     getTitle = () => {
-        let title = "Hi Travel Blog";
+        let waveEmoji = "👋";
+        let airplaneEmoji = "✈️";
+        let title = `Hi ${waveEmoji} Hola Ivan Travel ${airplaneEmoji} Blog`;
         return title;
     }
 
