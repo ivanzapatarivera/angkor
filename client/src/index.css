@@ -1,3 +1,10 @@
+:root {
+  --xpos: 50%;
+  --ypos: 50%;
+  --mxpos: calc(var(--xpos) * 1.125);
+  --txpos: calc(var(--mxpos) * 1.125);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,7 +15,7 @@ body {
   min-height: 100vh;
   background-image: url("background.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: var(--xpos) var(--ypos);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -16,4 +23,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media screen and (max-width: 780px) {
+  
+  body {
+    background-position: var(--txpos);
+  }
 }
