@@ -1,7 +1,7 @@
 export class SetTitle {
 
     getTitle = () => {
-        let title = "John S. Brook Travel Blog";
+        let title = "Hi Travel Blog";
         return title;
     }
 
