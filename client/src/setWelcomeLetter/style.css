@@ -19,7 +19,7 @@
 }
 
 .letter-text,
-.introduction { 
+.introduction {
   font-size: 1.5rem;
 }
 
@@ -58,8 +58,14 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 480px) {
   .letter {
     padding: 1.25rem;
+  }
+
+  .profile-picture {
+    position: relative;
+    left: 1w2.25%;
+    max-width: 250px;
   }
 }
