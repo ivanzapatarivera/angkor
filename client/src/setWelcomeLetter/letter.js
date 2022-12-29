@@ -1,8 +1,9 @@
 import { Component } from "react";
+import "./style.css";
 
 export default class Letter extends Component {
   returnWelcome = () => {
-    let welcome = "Welcome";
+    let welcome = "Welcome,";
     return welcome;
   };
 
@@ -30,9 +31,15 @@ export default class Letter extends Component {
   render() {
     let { returnWelcome, returnIntroduction, returnText, returnSignature } =
       this;
+    let image = require("./selfie.jpg");
+
     return (
       <div className="">
-        <div className="welcome">{returnWelcome()}</div>
+        <div className="welcome">
+          <img src={image} className="profile-picture" alt={image} /><br />
+        {returnWelcome()}
+        </div>
+        <br />
         <div className="introduction">{returnIntroduction()}</div>
         <div className="letter-text">{returnText()}</div>
         <div className="signature">{returnSignature()}</div>

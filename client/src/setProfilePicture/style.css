@@ -1,18 +1,1 @@
-.profile-picture {
-    max-width: 80px;
-    rotate: -25deg;
 
-    opacity: 85%;
-
-    position: absolute;
-    top: 8%;
-    left: 20%;
-    border-radius: 50%;
-}
-
-@media screen and (max-width: 780px) {
-    .profile-picture {
-        left: 45%;
-        top: 15%;
-    }
-}

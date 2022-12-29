@@ -7,7 +7,7 @@ export default class SetProfilePicture extends Component {
     let image = require("./selfie.jpg")
     return (
       <div>
-        <img src={image} alt={image} className="profile-picture" />
+        {/* <img src={image} alt={image} className="profile-picture" /> */}
       </div>
     );
   }
