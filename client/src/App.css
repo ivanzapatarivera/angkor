@@ -39,8 +39,11 @@
 .outer-box {
   padding: 0;
   margin: .5rem;
-
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
   overflow-x: hidden;
+
 }
 
 @keyframes App-logo-spin {
@@ -55,5 +58,5 @@
 @media screen and (min-width: 1080px) {
   .outer-box {
     max-width: 1080px;
-  }
+    }
 }
