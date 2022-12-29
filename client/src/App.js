@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { SetTitle } from "./setTitle/setTitle";
+import SetWelcomeLetter from "./setWelcomeLetter/setWelcomeLetter";
+
+import "./App.css";
 
 class App extends Component {
   componentDidMount = () => {
@@ -19,8 +22,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        
+      <div className="flex-center outer-box">
+        <div className="border border-top"></div>
+        <div className="contents">
+          <SetWelcomeLetter />
+        </div>
+        <div className="border border-bottom"></div>
       </div>
     );
   }
