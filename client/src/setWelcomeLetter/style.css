@@ -5,8 +5,6 @@
     --base-color: rgba(255, 255, 255, 0.85);
 
     --border: 1.25rem dashed var(--base-color);
-
-    --width: 780px;
 }
 
 .letter {
@@ -16,6 +14,8 @@
 
     background-color: var(--base-color);
     min-height: 75vh;
+
+    padding: 2rem;
 }
 
 .letter-text,
@@ -29,14 +29,33 @@
 }
 
 .welcome {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .signature {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 .border {
     border: var(--border);
-    width: var(--width)
+}
+
+.border-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom: 0px;
+}
+
+.border-bottom {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 0px;
+}
+
+
+@media screen and (max-width: 780px) {
+    .letter {
+        padding: 1.25rem;
+    }
 }

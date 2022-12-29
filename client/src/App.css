@@ -28,14 +28,8 @@
   color: #61dafb;
 }
 
-.contents {
-  min-height: 100vh;
-
-  margin: 0;
+#root {
   padding: 0;
-}
-
-.flex-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +37,10 @@
 }
 
 .outer-box {
-  padding: .5rem;
+  padding: 0;
+  margin: .5rem;
+
+  overflow-x: hidden;
 }
 
 @keyframes App-logo-spin {
@@ -52,5 +49,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .outer-box {
+    max-width: 1080px;
   }
 }
