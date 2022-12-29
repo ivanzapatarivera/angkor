@@ -3,6 +3,7 @@ import { SetTitle } from "./setTitle/setTitle";
 import SetWelcomeLetter from "./setWelcomeLetter/setWelcomeLetter";
 
 import "./App.css";
+import SetProfilePicture from "./setProfilePicture/setProfilePicture";
 
 class App extends Component {
   componentDidMount = () => {
@@ -23,10 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="flex-center outer-box">
+        <SetProfilePicture />
         <div className="border border-top"></div>
-        <div className="contents">
-          <SetWelcomeLetter />
-        </div>
+        <SetWelcomeLetter />
         <div className="border border-bottom"></div>
       </div>
     );
