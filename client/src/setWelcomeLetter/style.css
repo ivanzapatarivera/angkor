@@ -19,6 +19,10 @@
   font-size: 1.5rem;
 }
 
+.introduction {
+  margin-top: 1rem;
+}
+
 .welcome,
 .signature {
   font-size: 2rem;
@@ -73,5 +77,6 @@
 
   .welcome-image {
     width: 100%;
+    margin: 0;
   }
 }
