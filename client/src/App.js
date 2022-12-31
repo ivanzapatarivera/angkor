@@ -25,9 +25,9 @@ class App extends Component {
     return (
       <div className="flex-center outer-box">
         <SetProfilePicture />
-        <div className="border border-top"></div>
+        {/* <div className="border border-top"></div> */}
         <SetWelcomeLetter />
-        <div className="border border-bottom"></div>
+        {/* <div className="border border-bottom"></div> */}
       </div>
     );
   }

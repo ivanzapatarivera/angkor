@@ -2,20 +2,16 @@
 
 :root {
   --letter-font: "La Belle Aurore", cursive;
-  --base-color: rgba(255, 255, 255, 0.85);
-
   --border: 1.25rem dashed var(--base-color);
 }
 
 .letter {
   margin-bottom: 0;
-
-  font-family: var(--letter-font);
-
-  background-color: var(--base-color);
-  min-height: 75vh;
-
   padding: 2rem;
+  border-width: 0px;
+  background-color: var(--base-color);
+  font-family: var(--letter-font);
+  min-height: 75vh;
 }
 
 .letter-text,
@@ -26,27 +22,27 @@
 .welcome,
 .signature {
   font-size: 2rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-text {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.welcome-image {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .signature {
   padding-top: 1rem;
-}
-
-.border {
-  border: var(--border);
-}
-
-.border-top {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-
-  border-bottom: 0px;
-}
-
-.border-bottom {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top: 0px;
 }
 
 .profile-picture {
@@ -69,5 +65,17 @@
     margin-right: auto;
     max-width: 200px;
     margin-bottom: -25px;
+  }
+
+  .welcome {
+    flex-direction: column-reverse;
+  }
+
+  .welcome-text {
+    margin-top: 25px;
+  }
+
+  .welcome-image {
+    width: 100%;
   }
 }

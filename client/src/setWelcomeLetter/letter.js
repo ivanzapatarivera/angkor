@@ -36,10 +36,9 @@ export default class Letter extends Component {
     return (
       <div className="">
         <div className="welcome">
-          <img src={image} className="profile-picture" alt={image} /><br />
-        {returnWelcome()}
+          <div className="welcome-text">{returnWelcome()}</div>
+          <div className="welcome-image"><img src={image} className="profile-picture" alt={image} /></div>
         </div>
-        <br />
         <div className="introduction">{returnIntroduction()}</div>
         <div className="letter-text">{returnText()}</div>
         <div className="signature">{returnSignature()}</div>
