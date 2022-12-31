@@ -40,7 +40,9 @@ export default class Letter extends Component {
           <div className="welcome-image"><img src={image} className="profile-picture" alt={image} /></div>
         </div>
         <div className="introduction">{returnIntroduction()}</div>
-        <div className="letter-text">{returnText()}</div>
+        {returnText().map(element => {
+          return <div className="letter-text">{element}</div>
+        })}
         <div className="signature">{returnSignature()}</div>
       </div>
     );
