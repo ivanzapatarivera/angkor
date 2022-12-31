@@ -43,6 +43,7 @@ export default class Letter extends Component {
         {returnText().map(element => {
           return <div className="letter-text">{element}</div>
         })}
+
         <div className="signature">{returnSignature()}</div>
       </div>
     );
