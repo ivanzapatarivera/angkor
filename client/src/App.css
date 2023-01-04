@@ -51,6 +51,7 @@
   padding-bottom: 5px;
   max-width: fit-content;
   margin: auto;
+  margin-bottom: 1rem;
 }
 
 .outer-box {
@@ -76,4 +77,8 @@
   .outer-box {
     max-width: 1080px;
     }
+  
+  .btn {
+    margin: 0;
+  }
 }
