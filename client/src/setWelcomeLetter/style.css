@@ -29,12 +29,15 @@
 
   display: flex;
   flex-direction: row;
+
 }
 
 .welcome-text {
   display: flex;
   justify-content: left;
   align-items: flex-end;
+
+  padding-top: 2rem;
 }
 
 .welcome-image {

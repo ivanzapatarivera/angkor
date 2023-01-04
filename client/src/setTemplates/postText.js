@@ -56,6 +56,9 @@ export default class Template extends Component {
     return (
       <div className="letter">
         <div>
+        <div className="btn" id="home">
+        ⌂
+        </div>
           <div className="welcome">
             <div className="welcome-text">
               <ReturnWelcome />

@@ -61,7 +61,6 @@ class App extends Component {
     return (
       <div>
         <div className="flex-center outer-box">
-          {/* <SetProfilePicture /> */}
           {returnComponent()}
         </div>
       </div>
