@@ -2,18 +2,17 @@ import { Component } from "react";
 import "./style.css";
 
 export default class Letter extends Component {
-  returnWelcome = () => {
+  ReturnWelcome() {
     let welcome = "Welcome,";
     return welcome;
-  };
+  }
 
-  returnIntroduction = () => {
-    let introduction =
-      "My name is Ivan and thanks for stopping by.";
+  ReturnIntroduction() {
+    let introduction = "My name is Ivan and thanks for stopping by.";
     return introduction;
-  };
+  }
 
-  returnText = () => {
+  ReturnText() {
     let textArr = [
       "Since a young age, I’ve enjoyed traveling across five continents. It all started after joining friends on an adventure through South and Southeast Asia. I had such a wonderful experience that I decided to give it a go and continue doing what I enjoy the most.",
       "My passion grew as I visited Europe where I fell in love with its people, history and architecture. I also went on a few road trips through North America where I’ve seen one of a kind nature and felt the warmth of its people across Canada, United States, and Mexico. I’ve been to South America to visit friends, taste its gastronomy and dance to its music. ",
@@ -22,30 +21,47 @@ export default class Letter extends Component {
     ];
 
     return textArr;
-  };
+  }
 
-  returnSignature = () => {
+  ReturnSignature() {
     let signature = "Ivan";
     return signature;
-  };
+  }
+
+  ReturnImage() {
+    let image = require("./selfie.jpg");
+    return <img src={image} className="profile-picture" alt={image} />;
+  }
 
   render() {
-    let { returnWelcome, returnIntroduction, returnText, returnSignature } =
-      this;
-    let image = require("./selfie.jpg");
+    let {
+      ReturnWelcome,
+      ReturnIntroduction,
+      ReturnText,
+      ReturnSignature,
+      ReturnImage,
+    } = this;
 
     return (
       <div className="">
         <div className="welcome">
-          <div className="welcome-text">{returnWelcome()}</div>
-          <div className="welcome-image"><img src={image} className="profile-picture" alt={image} /></div>
+          <div className="welcome-text">
+            <ReturnWelcome />
+          </div>
+          <div className="welcome-image">
+            <ReturnImage />
+          </div>
         </div>
-        <div className="introduction">{returnIntroduction()}</div>
-        {returnText().map(element => {
-          return <div className="letter-text">{element}</div>
+        <div className="introduction">
+          <ReturnIntroduction />
+        </div>
+        {ReturnText().map((element) => {
+          return <div className="letter-text">{element}</div>;
         })}
 
-        <div className="signature">{returnSignature()}</div>
+        <div className="signature">
+          <ReturnSignature />
+        </div>
       </div>
     );
   }
