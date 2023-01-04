@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+
+:root {
+  --letter-font: "La Belle Aurore", cursive;
+  --border: 1.25rem dashed var(--base-color);
+}
+
+.letter {
+  margin-bottom: 0;
+  padding: 2rem;
+  border-width: 0px;
+  background-color: var(--base-color);
+  font-family: var(--letter-font);
+  min-height: 75vh;
+}
+
+.letter-text,
+.introduction {
+  font-size: 1.5rem;
+}
+
+.introduction {
+  margin-top: 1rem;
+}
+
+.welcome,
+.signature {
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-text {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+.welcome-image {
+  margin-left: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.signature {
+  padding-top: 1rem;
+}
+
+.profile-picture {
+  max-width: 125px;
+  rotate: -25deg;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  .letter {
+    padding: 1.25rem;
+  }
+
+  .profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+    margin-bottom: -25px;
+  }
+
+  .welcome {
+    flex-direction: column-reverse;
+  }
+
+  .welcome-text {
+    margin-top: 25px;
+  }
+
+  .welcome-image {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -41,6 +41,18 @@
   align-items: center;
 }
 
+.btn {
+  font: 1rem sans-serif;
+  background-color: rgb(164, 235, 255);
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  max-width: fit-content;
+  margin: auto;
+}
+
 .outer-box {
   padding: 0;
   margin: .5rem;

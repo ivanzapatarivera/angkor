@@ -43,7 +43,10 @@ export default class Letter extends Component {
     } = this;
 
     return (
-      <div className="">
+      <div>
+        <div className="btn" id="first-post">
+          First Post
+        </div>
         <div className="welcome">
           <div className="welcome-text">
             <ReturnWelcome />
@@ -56,7 +59,7 @@ export default class Letter extends Component {
           <ReturnIntroduction />
         </div>
         {ReturnText().map((element) => {
-          return <div className="letter-text">{element}</div>;
+          return <div className="letter-text" key={element}>{element}</div>;
         })}
 
         <div className="signature">
