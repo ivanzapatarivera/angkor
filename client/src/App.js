@@ -52,6 +52,7 @@ class App extends Component {
 
   returnComponent() {
     var page = this.state.page;
+    console.log(page)
     if (page === "welcome") return <SetWelcomeLetter />;
     if (page === "first-post") return <FirstPost />;
   }
