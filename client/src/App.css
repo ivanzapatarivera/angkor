@@ -54,6 +54,10 @@
   width: 6rem;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .outer-box {
   width: 95vw;
 

@@ -3,7 +3,6 @@ import { SetTitle } from "./setTitle/setTitle";
 import SetWelcomeLetter from "./setWelcomeLetter/setWelcomeLetter";
 
 import "./App.css";
-import SetProfilePicture from "./setProfilePicture/setProfilePicture";
 import FirstPost from "./setFirstPost/firstPost";
 
 const firstPost = "first-post";
@@ -21,7 +20,7 @@ class App extends Component {
   componentDidMount = () => {
     let title = this.setTitle();
     this.changeTitle(title);
-    this.firstPost();
+    this.handleFirstPostBtnVisibility();
   };
 
   setTitle() {
@@ -38,7 +37,7 @@ class App extends Component {
     console.log("clicked on");
   }
 
-  firstPost() {
+  handleFirstPostBtnVisibility() {
     const firstPostBtn = document.getElementById(firstPost);
     if (firstPostBtn) {
       firstPostBtn.addEventListener("click", () => {
