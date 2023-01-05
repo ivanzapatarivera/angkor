@@ -6,7 +6,6 @@ import "./App.css";
 import FirstPost from "./setFirstPost/firstPost";
 
 const firstPost = "first-post";
-const home = "home";
 
 class App extends Component {
   constructor(props) {
