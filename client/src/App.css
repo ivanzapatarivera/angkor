@@ -55,8 +55,9 @@
 }
 
 .outer-box {
+  width: 95vw;
+
   padding: 0;
-  margin: .5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
   
