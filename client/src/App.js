@@ -16,6 +16,7 @@ class App extends Component {
       page: "welcome",
     };
     this.returnComponent = this.returnComponent.bind(this);
+    this.handleState = this.handleState.bind(this);
   }
 
   componentDidMount = () => {
@@ -34,14 +35,19 @@ class App extends Component {
     return;
   }
 
+  handleState(pageName) {
+    this.setState({
+      page: pageName,
+    });
+    return;
+  }
+
   handleFirstPostBtnVisibility() {
     const firstPostBtn = document.getElementById(firstPost);
     if (firstPostBtn) {
       firstPostBtn.addEventListener("click", () => {
         firstPostBtn.style.visibility = "hidden";
-        this.setState({
-          page: firstPost,
-        });
+        this.handleState(firstPost);
       });
     }
   }
@@ -57,7 +63,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Navigation page={this.state.page} />
+        <Navigation page={this.state.page} handleState={this.handleState}/>
         <div className="flex-center outer-box">{returnComponent()}</div>
       </div>
     );
