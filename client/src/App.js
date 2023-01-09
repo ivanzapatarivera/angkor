@@ -20,17 +20,12 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    let title = this.setTitle();
-    this.changeTitle(title);
-    this.handleFirstPostBtnVisibility();
+    let title = this.handleChangeTitle();
+    this.handleChangeTitle(title);
+    this.handleShortcutButton();
   };
 
-  setTitle() {
-    let title = new SetTitle().returnTitle();
-    return title;
-  }
-
-  changeTitle(title) {
+  handleChangeTitle(title) {
     document.title = title;
     return;
   }
@@ -42,12 +37,13 @@ class App extends Component {
     return;
   }
 
-  handleFirstPostBtnVisibility() {
-    const firstPostBtn = document.getElementById(firstPost);
-    if (firstPostBtn) {
-      firstPostBtn.addEventListener("click", () => {
-        firstPostBtn.style.visibility = "hidden";
-        this.handleState(firstPost);
+  handleShortcutButton() {
+    var page = this.state.page;
+    const btn = document.getElementById(page);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        btn.style.visibility = "hidden";
+        this.handleState(page);
       });
     }
   }
@@ -63,7 +59,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Navigation page={this.state.page} handleState={this.handleState}/>
+        <Navigation page={this.state.page} handleState={this.handleState} />
         <div className="flex-center outer-box">{returnComponent()}</div>
       </div>
     );

@@ -17,6 +17,10 @@ export default class Navigation extends Component {
     this.checkValue();
   }
 
+  handleState(value) {
+    this.props.handleState(value);
+    return;
+  }
   checkValue() {
     var option = document.querySelectorAll("option");
     option.forEach((el) => {
@@ -25,10 +29,6 @@ export default class Navigation extends Component {
         this.handleState(value);
       });
     });
-  }
-
-  handleState(value) {
-    this.props.handleState(value);
   }
 
   returnOptions() {
@@ -65,7 +65,6 @@ export default class Navigation extends Component {
   }
 
   Navigation() {
-
     var navigationEls = this.returnElements();
     return navigationEls;
   }
