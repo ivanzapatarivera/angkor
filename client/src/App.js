@@ -5,6 +5,7 @@ import SetWelcomeLetter from "./setWelcomeLetter/setWelcomeLetter";
 import "./App.css";
 import FirstPost from "./setFirstPost/firstPost";
 import Header from "./Header/Header";
+import Navigation from "./Navigation/Navigation";
 
 const firstPost = "first-post";
 
@@ -33,10 +34,6 @@ class App extends Component {
     return;
   }
 
-  changeStatePage() {
-    console.log("clicked on");
-  }
-
   handleFirstPostBtnVisibility() {
     const firstPostBtn = document.getElementById(firstPost);
     if (firstPostBtn) {
@@ -51,7 +48,6 @@ class App extends Component {
 
   returnComponent() {
     var page = this.state.page;
-    console.log(page)
     if (page === "welcome") return <SetWelcomeLetter />;
     if (page === "first-post") return <FirstPost />;
   }
@@ -61,9 +57,8 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div className="flex-center outer-box">
-          {returnComponent()}
-        </div>
+        <Navigation page={this.state.page} />
+        <div className="flex-center outer-box">{returnComponent()}</div>
       </div>
     );
   }

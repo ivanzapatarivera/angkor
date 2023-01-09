@@ -58,9 +58,13 @@
   cursor: pointer;
 }
 
-.outer-box {
+.outer-box,
+header,
+nav {
   width: 95vw;
+}
 
+.outer-box {
   padding: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -82,7 +86,8 @@
 @media screen and (min-width: 1080px) {
 
   .outer-box,
-  header {
+  header,
+  nav {
     max-width: 1080px;
   }
 
