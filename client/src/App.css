@@ -91,6 +91,12 @@ nav {
     max-width: 1080px;
   }
 
+  header,
+  nav {
+    visibility: hidden;
+    display: none;
+  }
+
   .btn {
     margin: 0;
   }
