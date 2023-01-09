@@ -31,7 +31,6 @@ export default class Letter extends Component {
       "Although travel may sound like lots of fun, it’s an experience that becomes more incredible when it can be shared with friends from all Around the World. For a traveler, it does not only make each experience unique and cool, it also makes the world much smaller and intimate.",
       "So, I open the doors of my travel box and welcome you to join me through this journey.",
     ];
-
     return textArr;
   }
 
@@ -55,7 +54,7 @@ export default class Letter extends Component {
     } = this;
 
     return (
-      <div>
+      <section>
         <div className="btn" id="first-post">
           First Post
         </div>
@@ -81,7 +80,7 @@ export default class Letter extends Component {
         <div className="signature">
           <ReturnSignature />
         </div>
-      </div>
+      </section>
     );
   }
 }

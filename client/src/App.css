@@ -54,7 +54,8 @@
   width: 6rem;
 }
 
-.btn:hover {
+.btn:hover,
+option:hover {
   cursor: pointer;
 }
 
@@ -84,7 +85,6 @@ nav {
 }
 
 @media screen and (min-width: 1080px) {
-
   .outer-box,
   header,
   nav {
@@ -94,6 +94,8 @@ nav {
   .btn {
     margin: 0;
   }
+}
 
-
+nav, header {
+  display: none;
 }
