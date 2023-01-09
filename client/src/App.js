@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { SetTitle } from "./setTitle/setTitle";
+import { SetTitle } from "./Title/Title";
 import SetWelcomeLetter from "./setWelcomeLetter/setWelcomeLetter";
 
 import "./App.css";
 import FirstPost from "./setFirstPost/firstPost";
+import Header from "./Header/Header";
 
 const firstPost = "first-post";
 
@@ -59,6 +60,7 @@ class App extends Component {
     var { returnComponent } = this;
     return (
       <div>
+        <Header />
         <div className="flex-center outer-box">
           {returnComponent()}
         </div>

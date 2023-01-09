@@ -45,7 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font: bold 1rem arial,sans-serif;
+  font: bold 1rem arial, sans-serif;
   background-color: rgb(164, 235, 255);
   border-radius: 15px;
   margin: auto;
@@ -64,7 +64,7 @@
   padding: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  
+
   overflow-x: hidden;
   border-radius: var(--radius);
 }
@@ -73,17 +73,22 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 @media screen and (min-width: 1080px) {
-  .outer-box {
+
+  .outer-box,
+  header {
     max-width: 1080px;
-    }
-  
+  }
+
   .btn {
     margin: 0;
   }
+
+
 }
