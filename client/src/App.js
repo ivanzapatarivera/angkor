@@ -20,11 +20,9 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    let title = this.handleChangeTitle();
-    this.handleChangeTitle(title);
-    this.handleShortcutButton();
+    this.handleFirstPostBtnVisibility();
   };
-
+  
   handleChangeTitle(title) {
     document.title = title;
     return;
@@ -37,13 +35,12 @@ class App extends Component {
     return;
   }
 
-  handleShortcutButton() {
-    var page = this.state.page;
-    const btn = document.getElementById(page);
-    if (btn) {
-      btn.addEventListener("click", () => {
-        btn.style.visibility = "hidden";
-        this.handleState(page);
+  handleFirstPostBtnVisibility() {
+    const firstPostBtn = document.getElementById(firstPost);
+    if (firstPostBtn) {
+      firstPostBtn.addEventListener("click", () => {
+        firstPostBtn.style.visibility = "hidden";
+        this.handleState(firstPost);
       });
     }
   }

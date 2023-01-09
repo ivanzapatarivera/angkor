@@ -1,7 +1,19 @@
 import { Component } from "react";
+import { SetTitle } from "../Title/Title";
 import "./style.css";
 
 export default class Letter extends Component {
+  componentDidMount() {
+    this.ReturnTitle();
+  }
+
+  ReturnTitle() {
+    const waveEmoji = "👋";
+    const airplaneEmoji = "✈️";
+    const title = `Hi ${waveEmoji} Hola Ivan Travel ${airplaneEmoji} Blog`;
+    new SetTitle(title).returnTitle();
+  }
+
   ReturnWelcome() {
     let welcome = "Welcome,";
     return welcome;
@@ -59,7 +71,11 @@ export default class Letter extends Component {
           <ReturnIntroduction />
         </div>
         {ReturnText().map((element) => {
-          return <div className="letter-text" key={element}>{element}</div>;
+          return (
+            <div className="letter-text" key={element}>
+              {element}
+            </div>
+          );
         })}
 
         <div className="signature">
