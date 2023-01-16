@@ -42,8 +42,8 @@ export default class Letter extends Component {
 
   ReturnImage() {
     let image = require("./selfie.jpg");
-    return image
-    // return <img src={image} className="profile-picture" alt={image} />;
+    // return image;
+    return <img src={image} className="profile-picture" alt={image} />;
   }
 
   render() {
@@ -60,14 +60,14 @@ export default class Letter extends Component {
         <div className="btn" id="first-post">
           First Post
         </div>
-        <Template 
+        {/* <Template 
           welcome={ ReturnWelcome() }
           introduction={ ReturnIntroduction() }
           textArr={ ReturnText() }
           signature={ ReturnSignature() }
           image={ ReturnImage() }
-        />
-        {/* <div className="welcome">
+        /> */}
+        <div className="welcome">
           <div className="welcome-text">
             <ReturnWelcome />
           </div>
@@ -88,7 +88,7 @@ export default class Letter extends Component {
 
         <div className="signature">
           <ReturnSignature />
-        </div> */}
+        </div>
       </section>
     );
   }
