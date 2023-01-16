@@ -66,14 +66,14 @@ export default class Letter extends Component {
             <ReturnImage />
           </div>
         </div>
-        <div className="introduction">
+        <p className="introduction">
           <ReturnIntroduction />
-        </div>
+        </p>
         {ReturnText().map((element) => {
           return (
-            <div className="letter-text" key={element}>
+            <p className="letter-text" key={element}>
               {element}
-            </div>
+            </p>
           );
         })}
 

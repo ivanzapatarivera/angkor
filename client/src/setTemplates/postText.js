@@ -56,27 +56,29 @@ export default class Template extends Component {
     return (
       <div className="letter">
         <div>
-        <div className="btn" id="home">
-        ⌂
-        </div>
-          <div className="welcome">
+          <div className="btn" id="home">
+            ⌂
+          </div>
+          <section className="welcome">
             <div className="welcome-text">
               <ReturnWelcome />
             </div>
             <div className="welcome-image">
               <ReturnImage />
             </div>
-          </div>
-          <div className="introduction">
-            <ReturnIntroduction />
-          </div>
-          {ReturnText().map((element) => {
-            return <div className="letter-text">{element}</div>;
-          })}
+          </section>
+          <article>
+            <p className="introduction">
+              <ReturnIntroduction />
+            </p>
+            {ReturnText().map((element) => {
+              return <p className="letter-text">{element}</p>;
+            })}
 
-          <div className="signature">
-            <ReturnSignature />
-          </div>
+            <div className="signature">
+              <ReturnSignature />
+            </div>
+          </article>
         </div>
       </div>
     );
