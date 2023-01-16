@@ -1,12 +1,19 @@
 import { Component } from "react";
 import Template from "../setTemplates/postText";
+import { SetTitle } from "../Title/Title";
 
 var home = "home";
 
 export default class FirstPost extends Component {
   componentDidMount() {
+    this.setTitle();
     this.updateBackgroundImage();
     this.setHomeEventListener();
+  }
+
+  setTitle() {
+    var title = "My First Post of 2023 | Hi.Hola Ivan";
+    new SetTitle(title).returnTitle();
   }
 
   updateBackgroundImage() {

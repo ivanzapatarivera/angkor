@@ -8,9 +8,9 @@ export default class Letter extends Component {
   }
 
   ReturnTitle() {
-    const waveEmoji = "👋";
-    const airplaneEmoji = "✈️";
-    const title = `Hi ${waveEmoji} Hola Ivan Travel ${airplaneEmoji} Blog`;
+    // const waveEmoji = "👋";
+    // const airplaneEmoji = "✈️";
+    const title = `Hi.Hola Ivan Travel Blog`;
     new SetTitle(title).returnTitle();
   }
 
