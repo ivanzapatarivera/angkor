@@ -29,6 +29,10 @@ code {
     monospace;
 }
 
+.icon {
+  transform: rotate(180deg);
+}
+
 @media screen and (max-width: 780px) {
 
   body {
