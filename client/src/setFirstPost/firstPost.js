@@ -12,7 +12,7 @@ export default class FirstPost extends Component {
   }
 
   setTitle() {
-    var title = "My First Post of 2023 | Hi.Hola Ivan";
+    var title = "Hi.Hola Ivan: My First Post of 2023 ";
     new SetTitle(title).returnTitle();
   }
 
@@ -29,6 +29,16 @@ export default class FirstPost extends Component {
         window.location.reload();
       });
     }
+  }
+
+  returnBtnString() {
+    let btnString = "⌂";
+    return btnString
+  }
+
+  returnBtnId() {
+    let btnId = "home";
+    return btnId;
   }
 
   returnWelcome() {
@@ -64,14 +74,20 @@ export default class FirstPost extends Component {
 
   render() {
     var {
+      returnBtnString,
+      returnBtnId,
       returnWelcome,
       returnIntroduction,
       returnText,
       returnSignature,
       returnImage,
     } = this;
+
+    console.log(returnBtnId(), returnBtnString())
     return (
       <Template
+        btnString={returnBtnString()}
+        btnId={returnBtnId()}
         welcome={returnWelcome()}
         introduction={returnIntroduction()}
         textArr={returnText()}

@@ -9,7 +9,8 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "build": "npm run build --prefix client"
+    "build": "npm run build --prefix client",
+    "commit": "npm run build\ngit add .\ngit commit -m \"new build completed\"\ngit push\n"
   },
   "repository": {
     "type": "git",

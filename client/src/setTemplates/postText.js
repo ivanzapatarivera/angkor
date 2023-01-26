@@ -5,12 +5,15 @@ export default class Template extends Component {
   constructor(props) {
     super(props);
     this.props = {
+      string: props.btnString,
+      id: props.btnId,
       welcome: props.welcome,
       introduction: props.introduction,
       textArr: props.textArr,
       signature: props.signature,
       image: props.image,
     };
+    this.ReturnButton = this.ReturnButton.bind(this);
     this.ReturnImage = this.ReturnImage.bind(this);
     this.ReturnIntroduction = this.ReturnIntroduction.bind(this);
     this.ReturnWelcome = this.ReturnWelcome.bind(this);
@@ -18,9 +21,14 @@ export default class Template extends Component {
     this.ReturnSignature = this.ReturnSignature.bind(this);
   }
 
+  ReturnButton() {
+    let btnString = this.props.btnString;
+    let btnId = this.props.btnId;
+    return <div className="btn" id={btnId}>{btnString}</div>
+  }
+
   ReturnWelcome() {
     let welcome = this.props.welcome;
-    console.log(welcome);
     return welcome;
   }
 
@@ -46,6 +54,7 @@ export default class Template extends Component {
 
   render() {
     let {
+      ReturnButton,
       ReturnWelcome,
       ReturnIntroduction,
       ReturnText,
@@ -56,9 +65,9 @@ export default class Template extends Component {
     return (
       <div className="letter">
         <div>
-          <div className="btn" id="home">
-            ⌂
-          </div>
+          {/* <div className="btn" id="home"> */}
+            <ReturnButton />
+          {/* </div> */}
           <section className="welcome">
             <div className="welcome-text">
               <ReturnWelcome />

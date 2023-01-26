@@ -9,10 +9,18 @@ export default class Letter extends Component {
   }
 
   ReturnTitle() {
-    // const waveEmoji = "👋";
-    // const airplaneEmoji = "✈️";
     const title = `Hi.Hola Ivan Travel Blog`;
     new SetTitle(title).returnTitle();
+  }
+
+  ReturnButtonString() {
+    let button = "First Post";
+    return button;
+  }
+
+  ReturnButtonId() {
+    let id = "first-post";
+    return id;
   }
 
   ReturnWelcome() {
@@ -42,53 +50,31 @@ export default class Letter extends Component {
 
   ReturnImage() {
     let image = require("./selfie.jpg");
-    // return image;
-    return <img src={image} className="profile-picture" alt={image} />;
+    return image;
   }
 
   render() {
     let {
+      ReturnButtonString,
+      ReturnButtonId,
       ReturnWelcome,
       ReturnIntroduction,
       ReturnText,
       ReturnSignature,
       ReturnImage,
     } = this;
-
+    
     return (
       <section>
-        <div className="btn" id="first-post">
-          First Post
-        </div>
-        {/* <Template 
-          welcome={ ReturnWelcome() }
-          introduction={ ReturnIntroduction() }
-          textArr={ ReturnText() }
-          signature={ ReturnSignature() }
-          image={ ReturnImage() }
-        /> */}
-        <div className="welcome">
-          <div className="welcome-text">
-            <ReturnWelcome />
-          </div>
-          <div className="welcome-image">
-            <ReturnImage />
-          </div>
-        </div>
-        <p className="introduction">
-          <ReturnIntroduction />
-        </p>
-        {ReturnText().map((element) => {
-          return (
-            <p className="letter-text" key={element}>
-              {element}
-            </p>
-          );
-        })}
-
-        <div className="signature">
-          <ReturnSignature />
-        </div>
+        <Template
+          btnString={ReturnButtonString()}
+          btnId={ReturnButtonId()}
+          welcome={ReturnWelcome()}
+          introduction={ReturnIntroduction()}
+          textArr={ReturnText()}
+          signature={ReturnSignature()}
+          image={ReturnImage()}
+        />
       </section>
     );
   }
