@@ -65,7 +65,6 @@ export default class Letter extends Component {
     } = this;
     
     return (
-      <section>
         <Template
           btnString={ReturnButtonString()}
           btnId={ReturnButtonId()}
@@ -75,7 +74,6 @@ export default class Letter extends Component {
           signature={ReturnSignature()}
           image={ReturnImage()}
         />
-      </section>
     );
   }
 }
