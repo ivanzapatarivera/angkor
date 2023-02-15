@@ -1,37 +1,37 @@
 {
-  "name": "angkor",
-  "version": "1.0.0",
-  "description": "Angkor is Project 0 for building John S. Brook travel blog.",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run test",
-    "start": "node index.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
-    "build": "npm run build --prefix client",
-    "commit": "npm run build\ngit add .\ngit commit -m \"new build completed\"\ngit push\n"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivanzapatarivera/angkor.git"
-  },
-  "keywords": [
-    "angkor",
-    "project0"
-  ],
-  "author": "Ivan J. Zapata-Rivera",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ivanzapatarivera/angkor/issues"
-  },
-  "homepage": "https://github.com/ivanzapatarivera/angkor#readme",
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "concurrently": "^7.6.0",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20",
-    "path": "^0.12.7"
-  }
+    "name": "angkor",
+    "version": "1.0.0",
+    "description": "Angkor is Project 0 for building John S. Brook travel blog.",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm run test",
+        "start": "node index.js",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+        "server": "nodemon index.js",
+        "client": "npm run start --prefix client",
+        "build": "npm run build --prefix client",
+        "commit": "npm run build\ngit add .\ngit commit -m \"new build completed\"\ngit push\n"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ivanzapatarivera/angkor.git"
+    },
+    "keywords": [
+        "angkor",
+        "project0"
+    ],
+    "author": "Ivan J. Zapata-Rivera",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ivanzapatarivera/angkor/issues"
+    },
+    "homepage": "https://github.com/ivanzapatarivera/angkor#readme",
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "concurrently": "^7.6.0",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "nodemon": "^2.0.20",
+        "path": "^0.12.7"
+    }
 }
